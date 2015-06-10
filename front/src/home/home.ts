@@ -121,6 +121,12 @@ export class ItemService {
             this.criterias = data.criterias;
         }
     }
+    
+    resetData() {
+        this.items = [];
+        this.criterias = [];
+        this.persist();
+    }
 }
 
 export class HomeController {
@@ -190,6 +196,12 @@ export class HomeController {
     
     persistData() {
         this.itemService.persist();
+    }
+    
+    resetData() {
+        if (confirm('Supprimer toutes les données ?')) {
+            this.itemService.resetData();
+        }
     }
 }
 
