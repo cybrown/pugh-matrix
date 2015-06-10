@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <h1 translate>Matrice de PUGH</h1>
+    <div class="row">
+        <div class="col-xs-1">Critères</div>
+        <div class="col-xs-1">Coefficient</div>
+        <div class="col-xs-1">Référence</div>
+        <div  class="col-xs-1" ng-repeat="item in ctrl.items">
+            <span ng-click="ctrl.startRenameItem(item.name)">{{item.name}}</span>
+            <button class="btn btn-default pull-right" ng-click="ctrl.removeItem(item.name)">
+                <i class="glyphicon glyphicon-trash"></i>
+            </button>
+        </div>
+        <div class="col-xs-1">
+            <form ng-submit="ctrl.addItem()">
+                <input class="form-control" type="text" ng-model="ctrl.newItemName" />
+            </form>
+        </div>
+    </div>
+    <div class="row" ng-repeat="criteria in ctrl.criterias">
+        <div class="col-xs-1">
+            <span ng-click="ctrl.startRenameCriteria(criteria.name)">{{criteria.label}}</span>
+            <button class="btn btn-default pull-right" ng-click="ctrl.removeCriteria(criteria.name)">
+                <i class="glyphicon glyphicon-trash"></i>
+            </button>
+        </div>
+        <div class="col-xs-1">
+            <input class="form-control" type="text" ng-model="criteria.weight" model-number on-update="ctrl.persistData()" />
+        </div>
+        <div class="col-xs-1">0</div>
+        <div  class="col-xs-1" ng-repeat="item in ctrl.items">
+            <three-input ng-model="item.scores[criteria.name]" model-number on-update="ctrl.persistData()" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1">
+            <form ng-submit="ctrl.addCriteria()">
+                <input class="form-control col-xs-4" type="text" ng-model="ctrl.newCriteriaName">
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1">Sommes</div>
+        <div class="col-xs-1">{{ctrl.weightsSum}}</div>
+        <div class="col-xs-1"></div>
+        <div class="col-xs-1" ng-class="{negative: sum < 0, positive: sum > 0}" ng-repeat="sum in ctrl.scoresSums track by $index">
+            {{sum}}
+        </div>
+    </div>
+</div>

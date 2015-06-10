@@ -1,0 +1,42 @@
+{
+    "PORT": 9001,
+
+    "CSS_PREPROCESSOR": "less",
+    "COVERAGE_DIR": "./coverage/",
+    "TYPESCRIPT_FRONT_OPTIONS": {
+        "target": "ES5"
+    },
+
+    "BACK_DIR": "./back/",
+    "BACK_LIB_DIR": "./back/lib/",
+    "BACK_LIB_TEST_DIR": "./back/lib/test/",
+    "BACK_SRC_DIR": "./back/src/",
+    "BACK_SRC_MAIN_DIR": "./back/src/main/",
+    "BACK_MAIN_FILE": "./back/index.js",
+
+    "ARCHIVE_FILE": "./archive.tar.gz",
+    "DIST_DIR": "./dist/",
+    "DIST_SRC_DIR": "./dist/src/",
+    "DIST_ASSETS_DIR": "./dist/assets/",
+    "DIST_ASSETS_JS_DIR": "./dist/assets/js/",
+    "DIST_ASSETS_LANGUAGES_DIR": "./dist/assets/languages/",
+    "DIST_ASSETS_LIBS_DIR": "./dist/assets/libs/",
+    "DIST_TEST_DIR": "./dist/test/",
+
+    "FRONT_DIR": "./front/",
+    "FRONT_E2E_DIR": "./front/e2e/",
+    "FRONT_SRC_DIR": "./front/src/",
+    "FRONT_SRC_PO_DIR": "./front/src/po/",
+    "FRONT_GEN_DIR": "./front/assets/",
+    "FRONT_GEN_JS_DIR": "./front/assets/js/",
+    "FRONT_GEN_STYLES_DIR": "./front/assets/styles/",
+    "FRONT_ASSETS_DIR": "./front/assets/",
+    "FRONT_ASSETS_LANGUAGES_DIR": "./front/assets/languages/",
+    "FRONT_ASSETS_LIBS_DIR": "./front/bower_components/",
+    "FRONT_ASSETS_IMAGES_DIR": "./front/assets/images/",
+    "FRONT_ASSETS_STYLES_DIR": "./front/styles/",
+    "FRONT_ASSETS_TYPINGS_DIR": "./front/typings/",
+    "FRONT_TEST_DIR": "./front/test/",
+    "FRONT_STATIC_DIR": "./front/static/",
+    "FRONT_STATIC_JS_DIR": "./front/static/js/"
+}

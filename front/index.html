@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr" manifest="app.manifest">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<link rel="icon" type="image/png" href="/static/images/favicon.png" />
+
+	<title>Matrice de Pugh</title>
+	<!-- build:css /assets/styles/styles.min.css -->
+	<link rel="stylesheet" href="/assets/styles/styles.css" />
+	<!-- endbuild -->
+	<!-- build:js /assets/js/plugin.js -->
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-gettext/dist/angular-gettext.js"></script>
+	<script src="/bower_components/ui-router/release/angular-ui-router.js"></script>
+	<!-- endbuild -->
+</head>
+
+<body ng-app="pugh" ng-strict-di>
+
+	<div ui-view></div>
+
+	<!-- build:js /assets/js/templates.js -->
+    <script src="/assets/js/templates.js"></script>
+    <script>
+    angular.module('templates', []);
+    </script>
+    <!-- endbuild -->
+
+	<script src="/static/js/config.js"></script>
+    <!-- build:js /assets/js/app.js -->
+	<script src="/assets/js/app.js"></script>
+	<!-- endbuild -->
+</body>
+</html>
